@@ -1,4 +1,5 @@
 import { disabledButton } from "./disabledButton.js";
+import { getUrl } from "./getUrl.js";
 
 let app = document.getElementById('app');
 let form = document.getElementById('form');
