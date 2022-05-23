@@ -1,35 +1,24 @@
+import { disabledButton } from "./disabledButton.js";
+
 let app = document.getElementById('app');
 let form = document.getElementById('form');
 let content = document.getElementById('content');
 
-const getUrl = async (url) => {
-    let res = await fetch('/url', {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ videoUrl: url})
-    })
-
-    let videoUrl = await res.json();
-    
-    // agregamos la etiqueta video...
-    let video = `
-        <video controls="" autoplay="" name="media">
-            <source src="${videoUrl}" type="video/mp4"></source>
-        </video>
-    `
-    content.innerHTML = video;
-}
+disabledButton(); // disable button at the beginning and with empty input
 
 form.addEventListener('submit', e => {
     e.preventDefault();
 
     content.innerHTML = '<img src="./img/spinning-circles.svg" alt="loader" />';
 
-    let url = e.target.url.value;
-    getUrl(url)
+    let url = e.target.url.value; // get value of input
+    let domain = url.split('/')[2]; // get domain
+
+    if(domain === 'www.tiktok.com' || domain === 'vm.tiktok.com'){
+        getUrl(url); // get data video
+    }else{
+        content.innerHTML = '<h3 class="messageError">Error, The url is not a tiktok link!</h3>'
+    }
     e.target.reset();
 })
 

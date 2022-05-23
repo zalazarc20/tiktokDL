@@ -4,6 +4,7 @@
     --color-text: #525252;
     --color-primary: #7241FF;
     --color-primary-light: #7241FF70;
+    --color-danger: #ff4141;
     --color-bg: #F5F1FF;
     --white: #ffffff;
 }
@@ -20,12 +21,11 @@ body{
 
 .container{
     max-width: 80%;
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
+    place-content: center;
 }
 
 .card{
@@ -111,9 +111,8 @@ form input:nth-child(1):focus, form input:nth-child(1):hover{
 }
 
 footer{
+    margin-top: 1rem;
     width: 100%;
-    position: absolute;
-    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,12 +122,24 @@ footer h3{
     color: var(--color-text);
     font-weight: 300;
     font-size: 14px;
+    margin: 0;
 }
 footer b{
     font-weight: 500;
     color: var(--color-primary);
 }
 
+footer p{
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+    color: var(--color-text);
+}
+
 .btn-instagram{
     text-decoration: none;
+}
+
+.messageError{
+    color: var(--color-danger);
 }
