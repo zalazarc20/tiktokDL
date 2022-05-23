@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
@@ -27,4 +27,5 @@ app.post('/url', async (req, res) => {
 
 app.listen(port, () => {
     console.log(`servidor activado - http://localhost:${port}`)
+    console.log(`server actived - port: ${port}`);
 })
