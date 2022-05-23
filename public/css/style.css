@@ -68,7 +68,7 @@ form input:nth-child(1):focus, form input:nth-child(1):hover{
     border: 2px solid var(--color-primary);
 }
 
-form input:nth-child(2){
+.btn-submit{
     background-color: var(--color-primary);
     border: none;
     border-radius: 10px;
@@ -77,7 +77,7 @@ form input:nth-child(2){
     cursor: pointer;
 }
 
-form input:nth-child(2):disabled{
+.btn-submit:disabled{
     background-color: var(--color-primary-light);
 }
 
@@ -98,11 +98,37 @@ form input:nth-child(2):disabled{
 }
 
 @media screen and (min-width: 720px) {
+    .content{
+        width: 400px;
+    }
     .content ol{
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .content video{
         width: 200px;
     }
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h3{
+    color: var(--color-text);
+    font-weight: 300;
+    font-size: 14px;
+}
+footer b{
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.btn-instagram{
+    text-decoration: none;
 }
