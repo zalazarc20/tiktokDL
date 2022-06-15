@@ -27,5 +27,6 @@ app.post('/url', async (req, res) => {
 
 app.listen(port, () => {
     console.log(`servidor activado - http://localhost:${port}`)
+    console.log(`${process.env.RAILWAY_STATIC_URL}`)
     console.log(`server actived - port: ${port}`);
 })
