@@ -1,7 +1,8 @@
 import http from 'https';
 import express from 'express';
 import bodyParser from 'body-parser';
-import { tiktokdownload } from "tiktok-scraper-without-watermark";
+// import { tiktokdownload } from "tiktok-scraper-without-watermark";
+import { tiktokDL } from './src/tiktokDL.js';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
@@ -18,7 +19,7 @@ app.post('/url', async (req, res) => {
     let { videoUrl } = req.body;
     
     // get url video
-    const tiktok = tiktokdownload(videoUrl);
+    const tiktok = tiktokDL(videoUrl);
     let { nowm } = await tiktok;
     const request = http.get(nowm);
 
