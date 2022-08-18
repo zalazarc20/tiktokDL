@@ -77,6 +77,16 @@ form input:nth-child(1):focus, form input:nth-child(1):hover{
     cursor: pointer;
 }
 
+.btn{
+    margin-bottom: 1rem;
+    padding: 0.4rem;
+    background-color: var(--color-primary);
+    color: var(--white);
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
 .btn-submit:disabled{
     background-color: var(--color-primary-light);
 }
@@ -93,6 +103,7 @@ form input:nth-child(1):focus, form input:nth-child(1):hover{
 }
 
 .content video{
+    justify-self: center;
     width: 300px;
     border-radius: 10px;
 }

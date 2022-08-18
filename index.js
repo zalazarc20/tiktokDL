@@ -1,7 +1,5 @@
-import http from 'https';
 import express from 'express';
 import bodyParser from 'body-parser';
-// import { tiktokdownload } from "tiktok-scraper-without-watermark";
 import { tiktokDL } from './src/tiktokDL.js';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -19,11 +17,8 @@ app.post('/url', async (req, res) => {
     let { videoUrl } = req.body;
     
     // get url video
-    const tiktok = tiktokDL(videoUrl);
-    let { nowm } = await tiktok;
-    const request = http.get(nowm);
-
-    request.on('response', video => res.send(JSON.stringify(video.rawHeaders[11])));
+    let {nowm, wm, music} = await tiktokDL(videoUrl);
+    res.send(JSON.stringify({nowm, wm, music}))
 })
 
 app.listen(port, () => {
