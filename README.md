@@ -2,7 +2,7 @@
 
 a very simple web version, to download the video in the best quality.
 
-This is [Demo](https://tiktokdl.up.railway.app/) aplication.
+this is demo
 
 ### how to use the app locally?
 - `git clone https://github.com/zalazarc20/tiktokDL.git`
