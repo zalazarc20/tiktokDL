@@ -2,8 +2,6 @@
 
 a very simple web version, to download the video in the best quality.
 
-this is demo
-
 ### how to use the app locally?
 - `git clone https://github.com/zalazarc20/tiktokDL.git`
 - `npm install`
