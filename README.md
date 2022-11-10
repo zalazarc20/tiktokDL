@@ -1,5 +1,7 @@
 # ✅ Tiktok DL (Download videos of tiktok, No Watermark) ✌️
 
+> ### ⚠️ **Warning!!** this project is not compatible with safari browser. ⚠️
+
 a very simple web version, to download the video in the best quality.
 
 ### how to use the app locally?
